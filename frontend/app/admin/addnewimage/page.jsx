@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import axios from "axios";
-import Button from "../../../components/Button/Button";
+import Button from "../../../components/Button/Button.jsx";
 import "./page.css";
 import { useRouter } from "next/navigation"
 export default function AddnewImage() {

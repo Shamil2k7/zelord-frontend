@@ -1,6 +1,6 @@
 "use client";
 import axios from "axios";
-import Button from "../../components/Button/Button";
+import Button from "../../components/Button/Button.jsx";
 import './page.css'
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation"
