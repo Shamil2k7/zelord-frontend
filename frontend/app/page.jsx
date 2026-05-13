@@ -53,7 +53,7 @@ export default function Home() {
                     </motion.h1>
                     <motion.p variants={fadeIn} className="hero-sub">Plan Your Dream Travel Destinations with us</motion.p>
                     <motion.div variants={fadeIn} className="hero-btns">
-                        <a href="#routes" className="btn btn-gold">View Routes →</a>
+                        <a href="#contact" className="btn btn-gold">Contacts →</a>
                         <a href="#features" className="btn btn-outline">Learn More</a>
                     </motion.div>
                 </motion.div>
