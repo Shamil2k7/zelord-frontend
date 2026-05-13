@@ -1,6 +1,6 @@
 import Button from "../Button/Button.jsx";
 import Dropdown from "../Dropdown/Dropdown.jsx";
-import Input from "../Input/Input.jsx";
+import Input from "../input/input.jsx";
 import Labal from "../Labal/labal.jsx";
 import './form.css'
 

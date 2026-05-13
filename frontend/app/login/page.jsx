@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "../../components/Button/Button.jsx";
-import Form from "../../components/Form/Form.jsx";
+import Form from "../../components/form/Form.jsx";
 import axios from "axios";
 import { useFormik } from "formik";
 import "./login.css";
