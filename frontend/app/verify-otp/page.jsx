@@ -1,18 +1,18 @@
 "use client";
 
+import { Suspense } from "react";
 import Button from "../../components/Button/Button.jsx";
 import axios from "axios";
 import { useFormik } from "formik";
 import "./login.css";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function Newpassword() {
+function VerifyOtpForm() {
     const router = useRouter();
     const searchParams = useSearchParams();
 
-    // ✅ get email from URL
     const email = searchParams.get("email");
-    
+
     const formik = useFormik({
         initialValues: {
             otp: "",
@@ -38,7 +38,7 @@ export default function Newpassword() {
         onSubmit: async (values) => {
             try {
                 const res = await axios.post(
-                    `http://localhost:5000/verify-otp`,
+                    `${process.env.NEXT_PUBLIC_API_URL}/verify-otp`,
                     {
                         email,
                         otp: values.otp,
@@ -48,7 +48,6 @@ export default function Newpassword() {
 
                 alert(res.data.message || "Password Updated ✅");
 
-                // ✅ redirect to login
                 router.push("/admin");
 
             } catch (error) {
@@ -63,7 +62,6 @@ export default function Newpassword() {
     return (
         <div className="mainWrapper">
 
-            {/* HEADER */}
             <div className="header">
                 <Button
                     text="Home"
@@ -71,16 +69,13 @@ export default function Newpassword() {
                 />
             </div>
 
-            {/* HEADING */}
             <div className="heading">
                 <h1>Reset Password</h1>
             </div>
 
-            {/* FORM */}
             <div className="FormWrapper">
                 <form onSubmit={formik.handleSubmit}>
 
-                    {/* OTP */}
                     <input
                         type="text"
                         name="otp"
@@ -88,11 +83,11 @@ export default function Newpassword() {
                         value={formik.values.otp}
                         onChange={formik.handleChange}
                     />
+
                     {formik.errors.otp && (
                         <span className="error">{formik.errors.otp}</span>
                     )}
 
-                    {/* NEW PASSWORD */}
                     <input
                         type="password"
                         name="password"
@@ -100,14 +95,25 @@ export default function Newpassword() {
                         value={formik.values.password}
                         onChange={formik.handleChange}
                     />
+
                     {formik.errors.password && (
                         <span className="error">{formik.errors.password}</span>
                     )}
 
-                    {/* BUTTON */}
-                    <button type="submit">Update Password</button>
+                    <button type="submit">
+                        Update Password
+                    </button>
+
                 </form>
             </div>
         </div>
+    );
+}
+
+export default function Newpassword() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <VerifyOtpForm />
+        </Suspense>
     );
 }
