@@ -1,7 +1,7 @@
-import Button from "../Button/Button";
-import Dropdown from "../Dropdown/Dropdown";
-import Input from "../Input/Input";
-import Labal from "../Labal/labal";
+import Button from "../Button/Button.jsx";
+import Dropdown from "../Dropdown/Dropdown.jsx";
+import Input from "../Input/Input.jsx";
+import Labal from "../Labal/labal.jsx";
 import './form.css'
 
 function Form({ data, onSubmit, values, handleChange, btnText, btnType,otherlink }) {
