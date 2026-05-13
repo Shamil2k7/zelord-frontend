@@ -21,7 +21,7 @@ function Footer() {
 
           <div className="contact-links">
 
-            <a href="https://wa.me/919876543210"
+            <a href="https://wa.me/9645179700"
                className="contact-link"
                target="_blank"
                rel="noopener noreferrer">
@@ -34,7 +34,7 @@ function Footer() {
               <span className="cl-arrow">→</span>
             </a>
 
-            <a href="https://instagram.com/keralaluxurytravels"
+            <a href="https://www.instagram.com/zedlord_travel_stories?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                className="contact-link"
                target="_blank"
                rel="noopener noreferrer">

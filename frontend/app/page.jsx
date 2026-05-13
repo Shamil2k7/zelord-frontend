@@ -159,7 +159,7 @@ export default function Home() {
                 viewport={{ once: true }}
             >
                 <h2>Ready to hit the road? Book your ticket today.</h2>
-                <a href="#routes" className="btn btn-navy">Book Now →</a>
+                <a href="https://wa.me/9645179700" className="btn btn-navy">Book Now →</a>
             </motion.div>
 
  <section id="gallery">
