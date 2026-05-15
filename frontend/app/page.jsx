@@ -69,7 +69,7 @@ export default function Home() {
                     className="reveal"
                 >
                     <p className="eyebrow">Let's Ride Together</p>
-                    <h2>Popular Destinations</h2>
+                    <h2>With Zelord</h2>
                 </motion.div>
 
                 <motion.div 

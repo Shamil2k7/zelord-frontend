@@ -42,7 +42,7 @@ function Footer() {
               <div className="cl-icon instagram">📸</div>
               <div className="cl-text">
                 <div className="cl-label">Follow Us on Instagram</div>
-                <div className="cl-value">@keralaluxurytravels</div>
+                <div className="cl-value">@zedlord_travel_stories</div>
               </div>
               <span className="cl-arrow">→</span>
             </a>
