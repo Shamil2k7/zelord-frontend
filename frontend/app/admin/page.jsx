@@ -15,10 +15,10 @@ export default function Admin() {
     //         router.push("/login"); // ❌ not logged in
     //     }
     // }, []);
-    // const handleLogout = () => {
-    //     localStorage.removeItem("token");
-    //     router.push("/login");
-    // };
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        router.push("/login");
+    };
 
     const [image, setimage] = useState([]);
     const [reel, setreel] = useState([]);
