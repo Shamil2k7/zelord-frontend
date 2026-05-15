@@ -8,17 +8,17 @@ import { useRouter } from "next/navigation"
 export default function Admin() {
     const router = useRouter();
 
-    useEffect(() => {
-        const token = localStorage.getItem("token");
+    // useEffect(() => {
+    //     const token = localStorage.getItem("token");
 
-        if (!token) {
-            router.push("/login"); // ❌ not logged in
-        }
-    }, []);
-    const handleLogout = () => {
-        localStorage.removeItem("token");
-        router.push("/login");
-    };
+    //     if (!token) {
+    //         router.push("/login"); // ❌ not logged in
+    //     }
+    // }, []);
+    // const handleLogout = () => {
+    //     localStorage.removeItem("token");
+    //     router.push("/login");
+    // };
 
     const [image, setimage] = useState([]);
     const [reel, setreel] = useState([]);
