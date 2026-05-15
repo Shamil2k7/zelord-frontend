@@ -12,13 +12,13 @@ export default function Addnewadmin() {
     const [loading, setLoading] = useState(false);
 
     // ✅ protect route
-    useEffect(() => {
-        const token = localStorage.getItem("token");
+    // useEffect(() => {
+    //     const token = localStorage.getItem("token");
 
-        if (!token) {
-            router.push("/login");
-        }
-    }, []);
+    //     if (!token) {
+    //         router.push("/login");
+    //     }
+    // }, []);
 
     const formik = useFormik({
         initialValues: {

@@ -9,13 +9,13 @@ export default function AddnewImage() {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [preview, setPreview] = useState("");
-    useEffect(() => {
-            const token = localStorage.getItem("token");
+    // useEffect(() => {
+    //         const token = localStorage.getItem("token");
     
-            if (!token) {
-                router.push("/login"); // ❌ not logged in
-            }
-        }, []);
+    //         if (!token) {
+    //             router.push("/login"); // ❌ not logged in
+    //         }
+    //     }, []);
     const formik = useFormik({
         initialValues: {
             ImageName: "",
