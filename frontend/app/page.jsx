@@ -40,8 +40,8 @@ export default function Home() {
             {/* HERO SECTION - Entrance Animation */}
             <section id="hero" style={{ padding: 0, minHeight: "100vh", position: "relative", display: "flex", alignItems: "center" }}>
                 <div className="hero-bg"></div>
-                <motion.div 
-                    className="hero-content" 
+                <motion.div
+                    className="hero-content"
                     style={{ paddingTop: "var(--nav-h)" }}
                     initial="hidden"
                     animate="visible"
@@ -61,7 +61,7 @@ export default function Home() {
 
             {/* DESTINATIONS - Reveal on Scroll */}
             <section id="destinations">
-                <motion.div 
+                <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
@@ -72,7 +72,7 @@ export default function Home() {
                     <h2>With Zelord</h2>
                 </motion.div>
 
-                <motion.div 
+                <motion.div
                     className="dest-grid"
                     initial="hidden"
                     whileInView="visible"
@@ -80,7 +80,7 @@ export default function Home() {
                     variants={staggerContainer}
                 >
                     {["Rome", "Paris", "Prague", "London"].map((city, i) => (
-                        <motion.div 
+                        <motion.div
                             key={city}
                             variants={fadeIn}
                             whileHover={{ scale: 1.05 }} // Interactive hover
@@ -99,7 +99,7 @@ export default function Home() {
             {/* FEATURES - Side Reveal */}
             <section id="features">
                 <div className="features-wrap">
-                    <motion.div 
+                    <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -107,8 +107,8 @@ export default function Home() {
                     >
                         <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80" alt="Happy traveller" />
                     </motion.div>
-                    
-                    <motion.div 
+
+                    <motion.div
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -135,24 +135,24 @@ export default function Home() {
             <section id="gallery">
                 <p className="eyebrow">Our Moments</p>
                 <h2>Image Gallery</h2>
-                <motion.div 
+                <motion.div
                     className="gallery-grid"
                     layout // Smoothly rearranges if items change
                 >
                     {image.map((img, index) => (
-                        <motion.img 
-                            key={index} 
+                        <motion.img
+                            key={index}
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img.File}`} 
+                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img.File}`}
                         />
                     ))}
                 </motion.div>
             </section>
 
-            <motion.div 
+            <motion.div
                 className="cta-banner"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -162,23 +162,30 @@ export default function Home() {
                 <a href="https://wa.me/9645179700" className="btn btn-navy">Book Now →</a>
             </motion.div>
 
- <section id="gallery">
-                
+            <section id="gallery">
+
                 <h2>Video Gallery</h2>
-                <motion.div 
+                <motion.div
                     className="gallery-grid"
                     layout // Smoothly rearranges if items change
                 >
-                    {reel.map((img, index) => (
-                        <motion.img 
-                            key={index} 
+                    {/* {reel.map((img, index) => (
+                        <motion.img
+                            key={index}
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img.File}`} 
+                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img.File}`}
                         />
-                    ))}
+                    ))} */}
+                    <motion.img
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        src={'image2.jpg'}
+                    />
                 </motion.div>
             </section>
 

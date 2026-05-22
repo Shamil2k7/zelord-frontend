@@ -23,7 +23,7 @@ export default function AddnewImage() {
         },
 
         validate: (values) => {
-            const errors = {};
+               const errors = {};
 
             if (!values.ImageName) {
                 errors.ImageName = "Image name is required";
