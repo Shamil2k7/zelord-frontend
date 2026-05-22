@@ -188,7 +188,7 @@ export default function Home() {
                         transition={{ delay: 0.1 }}
                     >
                         <video 
-                            src="/video1.mp4" // Placed in public/video1.mp4
+                            src="/reel2.mp4" // Placed in public/video1.mp4
                             controls 
                             muted
                             playsInline
@@ -205,7 +205,23 @@ export default function Home() {
                         transition={{ delay: 0.2 }}
                     >
                         <video 
-                            src="/video2.mp4" // Placed in public/video2.mp4
+                            src="/reel1.mp4" // Placed in public/video2.mp4
+                            controls 
+                            muted
+                            playsInline
+                            className="gallery-video"
+                        />
+                    </motion.div>
+                    {/* Video 2 */}
+                    <motion.div 
+                        className="video-wrapper"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        <video 
+                            src="/reel3.mp4" // Placed in public/video2.mp4
                             controls 
                             muted
                             playsInline
