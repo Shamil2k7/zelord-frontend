@@ -132,26 +132,39 @@ export default function Home() {
             </section>
 
             {/* GALLERY - Fetched Data Animation */}
-            <section id="gallery">
+            <section id="image-gallery">
                 <p className="eyebrow">Our Moments</p>
                 <h2>Image Gallery</h2>
-                <motion.div
-                    className="gallery-grid"
-                    layout // Smoothly rearranges if items change
-                >
-                    {image.map((img, index) => (
-                        <motion.img
-                            key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img.File}`}
-                        />
-                    ))}
+                <motion.div className="gallery-grid" layout>
+                    {/* Add your static images from the public folder here */}
+                    <motion.img
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 }}
+                        src="/image2.jpg" // Placed in public/image1.jpg
+                        alt="Gallery Image 1"
+                    />
+                    <motion.img
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        src="/image3.jpg" // Placed in public/image2.jpg
+                        alt="Gallery Image 2"
+                    />
+                    <motion.img
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                        src="/image1.webp" // Placed in public/image3.jpg
+                        alt="Gallery Image 3"
+                    />
                 </motion.div>
             </section>
 
+            {/* CALL TO ACTION */}
             <motion.div
                 className="cta-banner"
                 initial={{ opacity: 0 }}
@@ -162,30 +175,43 @@ export default function Home() {
                 <a href="https://wa.me/9645179700" className="btn btn-navy">Book Now →</a>
             </motion.div>
 
-            <section id="gallery">
-
+            {/* STATIC VIDEO GALLERY */}
+            <section id="video-gallery">
                 <h2>Video Gallery</h2>
-                <motion.div
-                    className="gallery-grid"
-                    layout // Smoothly rearranges if items change
-                >
-                    {/* {reel.map((img, index) => (
-                        <motion.img
-                            key={index}
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            src={`${process.env.NEXT_PUBLIC_API_URL}/uploads/${img.File}`}
-                        />
-                    ))} */}
-                    <motion.img
+                <motion.div className="gallery-grid" layout>
+                    {/* Video 1 */}
+                    <motion.div 
+                        className="video-wrapper"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                        src={'image2.jpg'}
-                    />
+                        transition={{ delay: 0.1 }}
+                    >
+                        <video 
+                            src="/video1.mp4" // Placed in public/video1.mp4
+                            controls 
+                            muted
+                            playsInline
+                            className="gallery-video"
+                        />
+                    </motion.div>
+
+                    {/* Video 2 */}
+                    <motion.div 
+                        className="video-wrapper"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                    >
+                        <video 
+                            src="/video2.mp4" // Placed in public/video2.mp4
+                            controls 
+                            muted
+                            playsInline
+                            className="gallery-video"
+                        />
+                    </motion.div>
                 </motion.div>
             </section>
 
